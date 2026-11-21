@@ -1,0 +1,11 @@
+# Local learning instructions
+/instructions/
+
+# Python-generated files and local environments
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# macOS metadata
+.DS_Store
