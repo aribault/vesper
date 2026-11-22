@@ -1,10 +1,13 @@
 from __future__ import annotations
+
 from enum import Enum
+
 
 class ScalarOperation(Enum):
     LEAF = "leaf"
     ADDITION = "addition"
     MULTIPLICATION = "multiplication"
+
 
 class ScalarGraph:
     value: float
