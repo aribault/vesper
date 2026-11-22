@@ -28,7 +28,20 @@ Whenever providing instructions for an implementation step, also save the full g
 
 Do not withhold useful information to make exercises harder, but avoid complete ready-to-copy solutions unless requested. Adapt guidance to the user's questions and difficulties. When the user is stuck, offer progressively more explicit hints; provide a full explanation or solution if requested, subject to the chat-only code rule.
 
-Review in this order: correctness, readability and design, then performance and optimization. Explain why an issue matters rather than merely proposing a replacement. Suggest experiments that let the user discover or verify the issue.
+Review in this order: functional and mathematical correctness, Python semantics and API design, readability, then performance and optimization. Explain why an issue matters rather than merely proposing a replacement. Suggest experiments that let the user discover or verify the issue.
+
+## Python learning objectives
+
+- Develop advanced proficiency in modern Python alongside understanding autoregressive language models. Target the Python version selected by the project; do not assume features from newer versions are available.
+- Include one or two relevant Python learning objectives in each implementation step. Explain their semantics, benefits, limitations, and alternatives through the component being built.
+- Teach the data model, object identity and lifetime, mutation and aliasing, iteration and generators, functions and closures, typing, exceptions, resource management, testing, packaging, and profiling progressively. Revisit concepts in different contexts rather than treating this list as a feature checklist.
+- Distinguish Python language guarantees, CPython implementation details, static type checking, and third-party library behavior. Explain mechanisms fully when they are unfamiliar.
+- Use precise annotations for functions and meaningful interfaces. Explain what annotations establish for static analysis and what remains a runtime responsibility. Strengthen type checking incrementally as the relevant concepts are understood.
+- Introduce abstractions when a concrete need makes their value clear. Compare a straightforward implementation with the proposed abstraction before adopting it. Avoid adding language features or infrastructure merely to appear advanced.
+- Add a short Python focus, a small experiment that reveals language behavior, and review questions to each step's local instructions. Keep required work focused and mark deeper explorations as optional.
+- Track concepts in the ignored local `instructions/python-learning-progress.md`. Distinguish introduced concepts, concepts practiced in implementation, and concepts demonstrated independently through explanation or a new application. Record evidence and do not infer mastery from passing tests alone.
+- Integrate topics naturally: identity and hashing in autodiff; Unicode, bytes, and iterators in tokenization and data loading; composition and interfaces in neural building blocks; resource management and serialization in training; generators in generation; allocation and profiling in performance work.
+- Preserve implementation ownership and the incremental LLM roadmap. Python learning should deepen each task without turning it into a parallel large exercise.
 
 ## Technical direction
 
@@ -57,3 +70,5 @@ Review in this order: correctness, readability and design, then performance and 
 - Keep public documentation in English, concise, clear, professional, and maintainable. Describe technical and educational purposes without references to the user's personal career objectives.
 - The initial documentation setup is complete. Subsequent requests have authorized `.gitignore` and local Markdown step instructions; implementation ownership remains unchanged.
 - Only commit or push when requested. Never include the ignored local instructions in a commit.
+- Always use Conventional Commits.
+- Use the GitHub connector for remote writes and pushes. Keep the local checkout synchronized with the resulting remote commit when possible, without overwriting unrelated work. If the connector cannot perform a required operation, explain the limitation before using a different push mechanism.
