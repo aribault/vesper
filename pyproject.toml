@@ -1,0 +1,12 @@
+[project]
+name = "vesper"
+version = "0.1.0"
+description = "A hands-on exploration of autoregressive language models from first principles."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+package = false
+python-preference = "only-system"
+python-downloads = "manual"

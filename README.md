@@ -39,6 +39,14 @@ The learner writes all implementation code; the assistant acts as a technical me
 
 Persistent collaboration rules are in [AGENTS.md](AGENTS.md).
 
+## Python environment
+
+Use [pyenv](https://github.com/pyenv/pyenv) to manage Python versions and [uv](https://docs.astral.sh/uv/guides/projects/) to manage the project environment and dependencies. Python 3.12 is selected in `.python-version`; there are no project dependencies yet. uv is configured to use externally managed interpreters, including pyenv installations.
+
+With uv and Python 3.12 installed, run `uv sync` from the repository root to create the local `.venv`. Run Python commands through `uv run`, for example `uv run python --version`.
+
+Declare future dependencies with `uv add <package>` or development dependencies with `uv add --dev <package>`, after approval to install them. Commit `pyproject.toml`, `.python-version`, and the uv-generated `uv.lock`; keep `.venv` ignored. Automatic Python downloads are disabled; installing a Python interpreter is an explicit step.
+
 ## Status and license
 
 Documentation setup only; implementation has not started. The proposed first milestone is a small scalar automatic differentiation engine.

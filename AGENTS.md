@@ -49,6 +49,7 @@ Review in this order: correctness, readability and design, then performance and 
 - Prioritize correctness and understanding over scale or model quality. Tiny-data convergence, correctness demonstrations, and measurable computational trade-offs are sufficient outcomes.
 - Avoid prolonged intensive workloads and unnecessarily expensive local training.
 - Ask before installing dependencies, executing any training job, or downloading substantial datasets.
+- Manage Python versions with pyenv and the project environment and dependencies with uv. Use the Python version selected in `.python-version`, declare dependencies in `pyproject.toml`, and retain the uv-generated `uv.lock` in version control. Do not hand-edit the lockfile. Configure uv to use externally managed interpreters. Keep `.venv` ignored and automatic Python downloads disabled; interpreter installation also requires approval.
 - Never initiate paid cloud operations or expensive compute workloads without explicit approval. Use cloud GPUs only for meaningful educational value; keep total cloud spending within approximately €25–30. The budget itself is not authorization to spend.
 
 ## Documentation and repository changes

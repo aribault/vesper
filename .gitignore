@@ -1,11 +1,24 @@
 # Local learning instructions
 /instructions/
 
+# Local editor preferences
+/.vscode/
+
 # Python-generated files and local environments
 __pycache__/
 *.py[cod]
 .venv/
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Coverage and build artifacts
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
 
 # macOS metadata
 .DS_Store
